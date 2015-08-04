@@ -1,0 +1,14 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: Name
+
+  content:
+    label: Content
+    type: codeeditor
+    size: huge
+    language: html
+    commentAbove: Use the placeholder {popup_content}

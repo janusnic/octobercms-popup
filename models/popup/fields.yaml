@@ -1,0 +1,70 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: Name
+
+  layout:
+    label: Layout
+    type: relation
+    trigger:
+      action: hide
+      field: content_type
+      condition: value[page]
+
+  content_type:
+    label: Content Type
+    comment: You can upload an image or use an existing CMS page.
+    type: dropdown
+    span: left
+    options:
+      imageUrl: Image URL
+      imageUpload: Image Upload
+      page: CMS Page
+      markdown: MarkDown
+
+  content_image_url:
+    label: Content (Image URL)
+    span: right
+    trigger:
+      action: show
+      field: content_type
+      condition: value[imageUrl]
+
+  content_image_upload:
+    label: Content (Image Upload)
+    type: mediafinder
+    mode: image
+    span: right
+    trigger:
+      action: show
+      field: content_type
+      condition: value[imageUpload]
+
+  content_link:
+    label: Link destination
+    span: right
+    trigger:
+      action: show
+      field: content_type
+      condition: value[imageUrl] || value[imageUpload]
+
+  content_page:
+    label: Content (CMS Page)
+    type: dropdown
+    span: right
+    trigger:
+      action: show
+      field: content_type
+      condition: value[page]
+
+  content_markdown:
+    label: Content (Markdown)
+    type: textarea
+    span: right
+    trigger:
+      action: show
+      field: content_type
+      condition: value[markdown]

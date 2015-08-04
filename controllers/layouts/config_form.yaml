@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Layout
+
+# Model Form Field configuration
+form: $/ebussola/popup/models/layout/fields.yaml
+
+# Model Class name
+modelClass: Ebussola\Popup\Models\Layout
+
+# Default redirect location
+defaultRedirect: ebussola/popup/layouts
+
+# Create page
+create:
+    title: Create Layout
+    redirect: ebussola/popup/layouts/update/:id
+    redirectClose: ebussola/popup/layouts
+
+# Update page
+update:
+    title: Edit Layout
+    redirect: ebussola/popup/layouts
+    redirectClose: ebussola/popup/layouts
+
+# Preview page
+preview:
+    title: Preview Layout

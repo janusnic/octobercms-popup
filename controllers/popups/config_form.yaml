@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Popup
+
+# Model Form Field configuration
+form: $/ebussola/popup/models/popup/fields.yaml
+
+# Model Class name
+modelClass: Ebussola\Popup\Models\Popup
+
+# Default redirect location
+defaultRedirect: ebussola/popup/popups
+
+# Create page
+create:
+    title: Create Popup
+    redirect: ebussola/popup/popups/update/:id
+    redirectClose: ebussola/popup/popups
+
+# Update page
+update:
+    title: Edit Popup
+    redirect: ebussola/popup/popups
+    redirectClose: ebussola/popup/popups
+
+# Preview page
+preview:
+    title: Preview Popup
